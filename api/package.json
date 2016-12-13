@@ -1,7 +1,7 @@
 {
   "name": "serverless",
   "version": "0.0.0",
-  "description": "A serverless application using aws s3, cloudfront, lambda, api-gateway and dynamodb",
+  "description": "A serverless application using aws s3, lambda, apigateway and dynamodb",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,9 +14,8 @@
     "serverless",
     "aws",
     "s3",
-    "cloudfront",
     "lambda",
-    "api-gateway",
+    "apigateway",
     "dynamodb"
   ],
   "author": "Mohamed Sahad KP",
