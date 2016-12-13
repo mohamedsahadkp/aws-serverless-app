@@ -1,4 +1,4 @@
-# serverless
+# aws serverless
 A simple contact-us page appplication build using serverless architecture. 
 For serverless architecture we used aws s3, lambda, api-gateway and dynamodb 
 
