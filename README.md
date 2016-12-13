@@ -1,6 +1,6 @@
 # serverless
 A simple contact us page appplication build using serverless architecture. 
-For architecture i used aws s3, cloudfront, lambda, api-gateway and dynamodb 
+For serverless architecture we used aws s3, cloudfront, lambda, api-gateway and dynamodb 
 
 ####s3 - Keep html files
 ####cloudfront - Accelerates delivery of our websites (A CDN service)
