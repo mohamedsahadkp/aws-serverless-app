@@ -46,8 +46,8 @@ exports.handler = function(event, context) {
             
             authResponse.context = {};
             authResponse.context.stringKey = decoded.email;
-            //authResponse.context.numberKey = 123;
-            //authResponse.context.booleanKey = true;
+            authResponse.context.numberKey = 123;
+            authResponse.context.booleanKey = true;
             context.succeed(authResponse);
         }
     });
