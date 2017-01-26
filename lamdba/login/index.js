@@ -32,7 +32,7 @@ exports.handler = function(event, context) {
     
     var params = {
         AttributesToGet: [
-            "password"
+            "userID","email","password"
         ],
         TableName : tableName,
         Key : { 
@@ -73,8 +73,9 @@ function comparePassword(userPassword, candidatePassword, callback) {
     });
 };
 
-function generateToken(userEmail, callback) {
+function generateToken(userEmail, userID, callback) {
 	var token = jwt.sign({
+        userID : userID,
 		email: userEmail,
 		time: new Date().getTime()
 	}, config.security.secretKey);
