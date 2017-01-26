@@ -1,15 +1,19 @@
 console.log('Loading Contact US');
 
 var AWS = require('aws-sdk');
-var config = require('config.json')('./config/config.json');
+/* 
+    Here we stored the accessKey, secerateKey config.json file. 
+    You can also add  accessKey and secerateKey as Environment variables in lambda another option is
+    set Lambda Role that have permssion to access DynamoDB
+*/
+//var config = require('config.json')('./config/config.json');
+// var dynamoDBConfiguration = {
+//     "accessKeyId": config.aws.accessKey,
+//     "secretAccessKey": config.aws.secerateKey,
+//     "region": config.aws.region
+// };
 
-var dynamoDBConfiguration = {
-    "accessKeyId": config.aws.accessKey,
-    "secretAccessKey": config.aws.secerateKey,
-    "region": config.aws.region
-};
-
-AWS.config.update(dynamoDBConfiguration);
+// AWS.config.update(dynamoDBConfiguration);
 var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'}); 
 
 exports.handler = function(event, context) {

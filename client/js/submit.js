@@ -17,7 +17,7 @@
         e.preventDefault();
     }
 
-    $('#contact-form').submit( processForm );
+    $('#contact-form').submit(processForm);
 })(jQuery);
 
 
