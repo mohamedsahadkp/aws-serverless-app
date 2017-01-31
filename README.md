@@ -1,4 +1,4 @@
-# Serverless App (ayablogger)
+# Serverless App
 A simple blog appplication build using serverless architecture. 
 For serverless architecture we used aws s3, lambda, api-gateway and dynamodb 
 
