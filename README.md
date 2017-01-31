@@ -2,13 +2,13 @@
 A simple blog appplication build using serverless architecture. 
 For serverless architecture we used aws s3, lambda, api-gateway and dynamodb 
 
-# Architecture of Serverless Blog App
+### Architecture of Serverless Blog App
 <p align="center">
-  <img width="460" height="460" src="https://raw.githubusercontent.com/mohamedsahadkp/serverless/master/resource/architecture.jpg">
+  <img width="480" height="460" src="https://raw.githubusercontent.com/mohamedsahadkp/serverless/master/resource/architecture.jpg">
 </p>
 
-#### auth0
-auth0 is managed Authentication servers.
+#### Auth0
+Auth0 is managed Authentication servers.
 Using auth0 we authenticate and authorize our app and APIs with any identity provider running on any stack any device or cloud.
 
 We implemented login with google and facebook option with the help auth0.
@@ -33,6 +33,6 @@ Just upload your code and Lambda takes care of everything required to run and sc
 
 We implemented backend service in nodejs and pushed AWS Lambda.
 
-#### AWS Dynamodb
+#### AWS DynamoDB
 Amazon DynamoDB is database we are using.
 DynamoDB is a fully managed NoSQL database service that provides fast and predictable performance with seamless scalability.

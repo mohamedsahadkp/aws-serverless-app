@@ -39,9 +39,10 @@ exports.handler = function(event, context) {
         }
     }, function(err, data) {
         if (err) {
-            context.done(failure('Failed to publish your post', 500));
+            console.log("Error :: Blog Post :: index :: " + err)
+            context.done(failure('Internal server error, Please try later', 500));
         } else {
-            //console.log('great success: %j',data);
+            console.log("Success :: Blog Post :: index :: " + data)
             context.succeed(success('Successfully published your post', 200, null));    
         }
     });

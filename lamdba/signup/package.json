@@ -25,7 +25,6 @@
     "url": "https://github.com/mohamedsahadkp/serverless/issues"
   },
   "dependencies": {
-    "config.json": "0.0.4",
     "bcryptjs": "~2.4.0"
   }
 }

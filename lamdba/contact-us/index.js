@@ -1,24 +1,27 @@
-console.log('Loading Contact US');
+console.log('-------blog contact-us module---------');
 
 var AWS = require('aws-sdk');
-/* 
-    Here we stored the accessKey, secerateKey config.json file. 
-    You can also add  accessKey and secerateKey as Environment variables in lambda another option is
-    set Lambda Role that have permssion to access DynamoDB
-*/
-//var config = require('config.json')('./config/config.json');
-// var dynamoDBConfiguration = {
-//     "accessKeyId": config.aws.accessKey,
-//     "secretAccessKey": config.aws.secerateKey,
-//     "region": config.aws.region
-// };
-
-// AWS.config.update(dynamoDBConfiguration);
 var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'}); 
 
-exports.handler = function(event, context) {
-    console.log(JSON.stringify(event, null, '  '));
-    
+failure = function(message, code) {
+    return ({
+        status: 0,
+        message: message.toString(),
+        code: code,
+        data: null
+    });
+};
+
+success = function(message, code, results) {
+    return ({
+        status: 1,
+        message: message,
+        code: code,
+        data: results
+    });
+};
+
+exports.handler = function(event, context) {    
     var tableName = "contact-us";
     
     var userName=event.name;
@@ -34,10 +37,11 @@ exports.handler = function(event, context) {
         }
     }, function(err, data) {
         if (err) {
-            context.done(err);
+            console.log("Error :: Blog ContactUS :: index :: " + err)
+            context.done(failure('Internal server error, Please try later', 500));
         } else {
-            console.log('great success: %j',data);
-            context.succeed("Record Successfully Inserted");
+            console.log("Success :: Blog ContactUS :: index :: " + data)
+            context.succeed(success('Successfully posted your request', 200, null));    
         }
     });
 };
