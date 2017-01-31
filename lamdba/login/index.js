@@ -32,7 +32,7 @@ exports.handler = function(event, context) {
     
     var params = {
         AttributesToGet: [
-            "userID","email","password"
+            "userID", "email", "password"
         ],
         TableName : tableName,
         Key : { 
