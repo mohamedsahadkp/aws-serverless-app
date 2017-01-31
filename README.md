@@ -4,7 +4,7 @@ For serverless architecture we used aws s3, lambda, api-gateway and dynamodb
 
 # Architecture of Serverless Blog App
 <p align="center">
-  <img width="460" height="560" src="https://raw.githubusercontent.com/mohamedsahadkp/serverless/master/resource/architecture.jpg">
+  <img width="460" height="460" src="https://raw.githubusercontent.com/mohamedsahadkp/serverless/master/resource/architecture.jpg">
 </p>
 
 #### auth0
