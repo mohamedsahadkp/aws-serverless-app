@@ -27,7 +27,7 @@ exports.handler = function(event, context) {
     var blogHeadLine = event.headLine;
     var blogText = event.text;
     var blogPublishDate = event.publishedDate
-    var blogAuthor = event.author
+    var blogAuthor = event.userID
     
     dynamodb.putItem({
         "TableName": tableName,
@@ -47,3 +47,16 @@ exports.handler = function(event, context) {
         }
     });
 };
+
+function validate(event, callback) {
+    var reqBody = event;
+    
+    if(!reqBody.headLine)
+        context.done(failure('Blog head line is required', 400));
+    else if(!reqBody.text) 
+        context.done(failure('Blog body is required', 400));
+    else if(!reqBody.userID)
+        context.done(failure('Publisher is required', 400));
+    else
+        callback(true);
+}

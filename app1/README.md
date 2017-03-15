@@ -1,6 +1,8 @@
-# Serverless App
-A simple blog appplication build using serverless architecture. 
-For serverless architecture we used aws s3, lambda, api-gateway and dynamodb 
+# Serverless Blog App
+Simple blog appplication build using serverless architecture. 
+For serverless architecture we used AWS S3, Lambda, APIGateway and DynamoDB 
+
+
 
 ### Architecture of Serverless Blog App
 <p align="center">
@@ -8,7 +10,7 @@ For serverless architecture we used aws s3, lambda, api-gateway and dynamodb
 </p>
 
 #### Auth0
-Auth0 is managed Authentication servers.
+Auth0 is managed authentication servers.
 Using auth0 we authenticate and authorize our app and APIs with any identity provider running on any stack any device or cloud.
 
 We implemented login with google and facebook option with the help auth0.

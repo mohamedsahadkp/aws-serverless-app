@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "claudia-api-builder-example-executor",
+    "name": "claudia-api-builder-example",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "0lw7klnh8i",
+    "module": "index"
+  }
+}

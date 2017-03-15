@@ -49,7 +49,7 @@ exports.handler = function(event, context) {
     });
 };
 
-function publisherUserName(userID ,calllback) {
+function publisherUserName(userID, calllback) {
     var tableName = "User";
 
    var params = {
@@ -66,10 +66,10 @@ function publisherUserName(userID ,calllback) {
 
     dynamodb.getItem(params, function(err, data) {
         if (err) {
-            console.log("Error :: Blog Get :: publisherUserName :: " + err)
+            //console.log("Error :: Blog Get :: publisherUserName :: " + err)
             context.done(failure('Internal server error, Please try later', 500));
         } else {
-            console.log("Success :: Blog Get :: publisherUserName :: " + data)
+            //console.log("Success :: Blog Get :: publisherUserName :: " + data)
             calllback(data);
         }
     });

@@ -2,7 +2,7 @@ console.log('Loading Contact US');
 
 var AWS = require('aws-sdk');
 var jwt = require('jsonwebtoken');
-var config = require('config.json')('./config/config.json');
+var config = require('./config.json');
 
 var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'}); 
 
